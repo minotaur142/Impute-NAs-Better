@@ -3,8 +3,7 @@ Impute missing values while minimizing distortion of overall variable distributi
 
 1. Using available columns per row to create a bagged model
 2. Applying that model to non-NA rows to find distribution of residuals
-3. Impute value by adding a random residual from to the model's output
-
+3. Imputing values by adding a random residual from to the model's output
 
 This imputer is an implementation of a technique described in the following paper:
 
