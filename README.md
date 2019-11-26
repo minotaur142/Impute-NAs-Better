@@ -1,11 +1,11 @@
 # Impute-NAs-Better
 Impute missing values while minimizing distortion of overall variable distributions by:
 
-1. Using available columns per row to create a bagged model
-2. Applying that model to non-NA rows to find distribution of residuals
-3. Imputing values by adding a random residual from to the model's output
+1. Using available columns per row to create a bagged model.
+2. Applying that model to non-NA rows to find distribution of residuals.
+3. Adding variation to the model's output by adding a random residual to each of them.
 
-As designed this imputer takes in a dataframe whose categorical variables are encoded as strings, and imputes NAs of all missing values, starting with the columns with the fewest NAs, then using the newly NA-free columns in the next imputations.
+As designed this imputer takes in a dataframe whose categorical variables are encoded as strings, and imputes NAs for all missing values, starting with the columns with the fewest NAs, then using the newly NA-free columns in the next imputations.
 
 The regression estimator is linear regression, and the classifier is random forests.
 
