@@ -20,7 +20,7 @@ def impute_missing_values(df,var_deviation_tolerance=0.97, actual_or_gaussian_re
     df: dataframe with missing values
     var_deviation_tolerance: target percent deviation from original variable distributions
     actual_or_guassian_residuals: apply residuals to model outputs from actual distribution or from
-        a gaussian distribution based on residuals mean and variance
+        a gaussian distribution based on residuals' means and variances
     col_floor_ceiling_dict: a dictionary with the variable name and a tuple of the min and max for variables 
         with a finite range. Use float(inf) or float(-inf) for variables that are limited in only one direction
     scores: return accuracy score of models per variable'''
