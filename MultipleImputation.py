@@ -73,7 +73,7 @@ def impute_missing_values(df,var_deviation_tolerance=0.97, actual_or_gaussian_re
             if col in col_floor_ceiling_dict.keys():
                     preds = np.clip(preds,col_floor_ceiling_dict[col][0],col_floor_ceiling_dict[col][1])
         df[col][na_index] = preds
-        if scores == False:
-            return df
-        else:
-            return df, column_scores
+    if scores == False:
+        return df
+    else:
+        return df, column_scores
